@@ -6,8 +6,8 @@ def puissance(a,b):
 	if a == 0:
 		return 1
 
-	rep = abs(a)
+	rep = abs(-a)
 	for cheh in range (1,b):
 		rep = rep*a
 
-	return rep
+	return abs(rep)
