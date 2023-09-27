@@ -18,7 +18,7 @@ jobs:
       - name: Run tests
         run: pytest TP1/test.py
       - name: Version Pyton
-        run: echo "Version de python ${{runner.name}}"
+        run: echo "Version de python $(python --version)"
       - name: Branche
         run: echo "Nom branche ${{github.ref}}"
       - name: OS
