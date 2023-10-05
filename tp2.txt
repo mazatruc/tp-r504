@@ -30,8 +30,10 @@
 
 2.5 Oui sur la branche tp2
 
-2.6 non car il se trouve sur la branche tp2
+2.6 Non car il se trouve sur la branche tp2
 
 2.7 "git diff" permet de voir les changements dans les fichiers github
 
+3.1 Non car je ne suis pas le propriétaire du dossier github
 
+3.2
