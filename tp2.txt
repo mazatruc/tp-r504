@@ -28,4 +28,10 @@
 
 2.2 main
 
-2.3 Oui sur la branche 2
+2.5 Oui sur la branche tp2
+
+2.6 non car il se trouve sur la branche tp2
+
+2.7 "git diff" permet de voir les changements dans les fichiers github
+
+
