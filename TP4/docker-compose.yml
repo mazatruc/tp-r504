@@ -1,0 +1,19 @@
+version: '3'
+services:
+   app:
+      build:
+         context: .
+         dockerfile: Dockerfile
+      ports:
+         - "5000:5000"
+      volumes:
+         - ./app_1.py:/srv/app1.py
+         - ./index.html:/srv/templates/index.html
+      networks:
+         - net-tp4
+
+networks:
+   net-tp4:
+      external: true
+      name: "$net-tp4" 
+      
