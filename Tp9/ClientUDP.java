@@ -3,9 +3,9 @@ import java.net.*;
 
 public class ClientUDP
 {
-	public static void main()
+	public static void main( String[] args )
 	{
-		String s = "Hello World";
+		String s = "je te RATIO";
 		try {
 			InetAddress addr = InetAddress.getLocalHost();
 			System.out.println( "adresse = " + addr.getHostName() );
