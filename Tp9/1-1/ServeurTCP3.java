@@ -15,6 +15,9 @@ public class ServeurTCP3
 				String stock = dIn.readUTF();
 				System.out.println( "Message : " + stock );
 				String rev = new StringBuilder(stock).reverse().toString();
+				DataOutputStream dOut = new DataOutputStream( socket.getOutputStream() );
+				dOut.writeUTF( "Message inversé : " + rev );
+				System.out.println( "Message inversé : " + rev );
 	
 				socket.close();
 				socketserver.close();

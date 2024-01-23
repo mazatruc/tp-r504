@@ -9,6 +9,8 @@ public class ClientTCP3
 			Socket socket = new Socket( "localhost", 2016);
 			DataOutputStream dOut = new DataOutputStream( socket.getOutputStream() );
 			dOut.writeUTF( args[0] );
+			DataInputStream dIn = new DataInputStream( socket.getInputStream() );
+			System.out.println( dIn.readUTF() );
 			socket.close();
 		}
 		catch( Exception ex )
