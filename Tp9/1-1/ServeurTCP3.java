@@ -12,8 +12,9 @@ public class ServeurTCP3
 				Socket socket = socketserver.accept();
 				System.out.println( "Connection d'un client" );
 				DataInputStream dIn = new DataInputStream( socket.getInputStream() );
-				String rev = new StringBuilder(args[0]).reverse().toString();
-				System.out.println( "Message : " + dIn.readUTF() );
+				String stock = dIn.readUTF();
+				System.out.println( "Message : " + stock );
+				String rev = new StringBuilder(stock).reverse().toString();
 	
 				socket.close();
 				socketserver.close();
