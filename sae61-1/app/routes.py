@@ -6,7 +6,7 @@ from app.models import User
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('templates/home.html')
 
 @app.route('/newuser', methods=['GET', 'POST'])
 def new_user():
@@ -16,7 +16,6 @@ def new_user():
         password = generate_password_hash(form.password.data)
         email = form.email.data
 
-        # Check if username or email already exists
         user_exists = User.query.filter_by(username=username).first()
         email_exists = User.query.filter_by(email=email).first()
 
@@ -45,7 +44,6 @@ def connect():
 
         user = User.query.filter_by(username=username).first()
         if user and check_password_hash(user.password, password):
-            # Log in the user
             response = make_response(redirect(url_for('home')))
             response.set_cookie('username', username)
             return response
